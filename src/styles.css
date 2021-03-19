@@ -77,3 +77,9 @@ hr {
 .fadeIn {
   animation-name: fadeIn;
 }
+
+.card-columns {
+    column-count: 4;
+  }
+
+
