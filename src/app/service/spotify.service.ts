@@ -13,14 +13,14 @@ export class SpotifyService {
 
   getQuery(query: string) {
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQDOTDiaws4utU_CjHGdo2PEEsk979IlvlGwiBpxaC_N9bWsT-4_4srP1g9bDaFdxuplT84KKlOJYEziEjg'
+      'Authorization': 'Bearer BQCDXhIJkb3gylPJzNmx4XbqBBAr478R7gvHbdiCn6teyUdKcjXSqzaBx9ETU4ZGC6sjrwgszwrST_rWoZ4'
     })
     const url = `https://api.spotify.com/v1/${query}`;
     return this.http.get(url, { headers })
   }
 
   getNewRealeases() {
-    return this.getQuery('browse/new-releases?limit=20')
+    return this.getQuery('browse/new-releases?limit=10')
       .pipe(map(data => data['albums'].items));
   }
 
