@@ -20,7 +20,7 @@ hr {
   border-color: white;
 }
 
-.puntero {
+.pointer {
   cursor: pointer;
 }
 
@@ -79,7 +79,5 @@ hr {
 }
 
 .card-columns {
-    column-count: 4;
-  }
-
-
+  column-count: 4;
+}

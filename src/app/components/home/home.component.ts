@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
   loading: boolean;
 
   constructor(private spotify: SpotifyService) {
-    console.log('home')
   }
 
   ngOnInit() {
