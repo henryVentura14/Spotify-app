@@ -13,7 +13,6 @@ export class CardsComponent implements OnInit {
   }
 
   showArtist(item: any) {
-    console.log(item)
     let artistId: any;
     if (item.type === 'artist') {
       artistId = item.id;

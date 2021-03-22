@@ -11,6 +11,33 @@
     </a>
   </div>
   <div class="col-4 text-rigth">
-    <button routerLink="/search" routerLinkActive="router-link-active"  class="btn btn-outline-danger">Back</button>
+    <button routerLink="/search" routerLinkActive="router-link-active" class="btn btn-outline-light">Back</button>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col">
+    <table class="table table-hover table-dark grey-background border-less">
+      <thead>
+        <tr>
+          <th scope="col">Cover</th>
+          <th scope="col">Album</th>
+          <th scope="col">Song</th>
+          <th scope="col">Preview</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let x of tracks">
+          <th scope="row">
+            <img [src]="x.album.images | noimage" alt="album cover" class="img-thumb">
+          </th>
+          <td>{{x.album.name}}</td>
+          <td>{{x.name}}</td>
+          <td>
+            <audio [src]="x.preview_url" controls></audio>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

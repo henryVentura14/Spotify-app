@@ -11,6 +11,14 @@
   background-color: var(--greyBlue);
 }
 
+.green-background {
+  background-color: var(--green);
+}
+
+.border-less {
+  border: none;
+}
+
 body {
   background-color: var(--dark);
   color           : white !important;
