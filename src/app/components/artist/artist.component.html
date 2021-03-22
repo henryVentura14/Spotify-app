@@ -34,7 +34,8 @@
           <td>{{x.album.name}}</td>
           <td>{{x.name}}</td>
           <td>
-            <audio [src]="x.preview_url" controls></audio>
+            <!-- <audio [src]="x.preview_url" controls></audio> -->
+            <iframe [src]="x.uri | domseguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           </td>
         </tr>
       </tbody>
