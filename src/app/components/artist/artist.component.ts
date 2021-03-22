@@ -11,6 +11,8 @@ export class ArtistComponent implements OnInit {
   artist: any = {};
   tracks: any[] = [];
   loading: boolean;
+  error: boolean;
+  message: string;
 
   constructor(private router: ActivatedRoute, private spotify: SpotifyService) { }
 
@@ -38,6 +40,10 @@ export class ArtistComponent implements OnInit {
         this.tracks = tracks;
         console.log(tracks)
         this.loading = false;
-      })
+      }, (error) => {
+        this.error = true;
+        this.message = error.error.error.message;
+        this.loading = false;
+      });
   }
 }

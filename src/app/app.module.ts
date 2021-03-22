@@ -19,6 +19,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { SpotifyService } from './service/spotify.service';
 import { CardsComponent } from './components/shared/cards/cards.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { ErrorComponent } from './components/shared/error/error.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     DomseguroPipe,
     CardsComponent,
     LoadingComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
